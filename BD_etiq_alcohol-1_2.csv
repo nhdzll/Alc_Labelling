@@ -1,0 +1,45 @@
+id,tipo_bebida,marca,material_envase,capacidad,grados_alcohol,origen,EF,ET,EL,marbete,forma_envase,h,diametro_base,ancho_base,largo_base,EF1_ancho,EF1_largo,EF2_ancho,EF2_largo,EL1_ancho,EL1_largo,EL2_ancho,EL2_largo,ET1_ancho,ET1_largo,ET2_ancho,ET2_largo,marbete_altura,marbete_diametro,tamano_texto,posicion_pictograma,P1_menos_18a,P1_altura,P2_embarazo,P2_altura,P3_conduccion,P3_altura,P4_mas_18a,P4_altura,total_pictogramas,color_fondo,color_etiqueta,color_figura,color_lineas
+1,Cerveza,carta blanca,Vidrio Ambar,300,4.5,Nacional,Si,No,No,No,Cilindro,90,60.34,,,66,92,0,0,,,,,,,,,,,3,3,0,,0,,0,,1,10.3,1,Gris,,Negro,
+2,Ron,kraken,Vidrio Transparente,750,35,Nacional,Si,Si,No,No,Cilindro,127,88.1,,,109,119,0,0,,,,,82,95,0,0,32,30.09,3.5,1,1,8,1,8,1,8,0,,3,Transparente,Crema,Negro,Negro
+3,Vino,riunite,Vidrio Verde,750,8,Importado,Si,Si,No,Si,Cilindro,121,80.26,,,67,103,0,0,,,,,65,75,0,0,49,27.75,3.5,1,1,10,1,10,1,10,0,,3,Blanco,,Negro,Gris
+4,Tequila,don ramon,Vidrio Transparente,1000,38,Nacional,Si,Si,No,No,Cilindro,276,71.83,,,222,97,0,0,,,,,102,59,0,0,,,5,1,1,7,1,7,1,7,0,,3,Transparente,Transparente,Negro,Rojo
+5,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,,,,,,,,
+6,Whiskey,johnnie walker black label,Vidrio Transparente,750,40,Importado,Si,Si,No,Si,Prisma rectangular,240,,69.58,65.77,82,47,82,18.54878049,,,,,71,40,0,0,40,32.23,4.5,1,1,8,1,8,1,8,0,,3,Transparente,Negro,Dorado,Dorado
+7,Vino,opera prima,Vidrio Verde,750,13,Importado,Si,Si,No,Si,Cilindro,194,68.88,,,100,85,0,0,,,,,100,65,100,13.2,50,27.34,4.5,1,1,8,1,8,1,8,0,,3,Transparente,Negro,Crema,Rojo
+8,Cerveza,tempus,Vidrio Ambar,355,7,Nacional,Si,Si,No,Si,Cilindro,120,59.22,,,89,98,0,0,,,,,70,50,0,0,30,61,2.5,1,1,5,1,5,1,5,0,,3,Transparente,Negro,Blanco,Blanco
+9,Cerveza,moldova,Vidrio Ambar,350,6.2,Nacional,Si,No,Si,No,Cilindro,98,61.14,,,89,67,0,0,57,49,57,32,,,,,,,2.5,2,1,8,1,8,1,8,0,,3,Crema,,Negro,Rojo
+10,Cerveza,tempus,Vidrio Ambar,355,5.2,Nacional,Si,Si,No,Si,Cilindro,120,59.22,,,89,98,0,0,,,,,70,50,0,0,30,61,2.5,1,0,,0,,0,,1,10.5,1,Verde,,Blanco,
+11,Cerveza,cucapá,Vidrio Ambar,355,4.8,Nacional,Si,No,No,No,Cilindro,155,60.18,,,84,100,0,0,,,,,,,,,,,3,3,0,,0,,0,,1,10.5,1,Transparente,Blanco,Negro,
+12,Vino,Andiamo,Vidrio Verde,750,8,Importado,Si,Si,No,No,Cilindro,155,73.44,,,90,60,0,0,,,,,90,60,0,0,,,3.5,1,1,8,1,8,1,8,0,,3,Transparente,Blanco,Negro,Rojo
+13,Vino,Cuatro soles,Vidrio Verde,750,10,Nacional,Si,Si,No,Si,Cilindro,190,69.62,,,151,84,0,0,,,,,98,64,0,0,44,27.85,4,1,1,10,1,10,1,10,0,,3,Blanco,,Negro,Rojo
+14,Vino,Finca las moras,Vidrio Verde,750,13.5,Importado,Si,Si,No,Si,Cilindro,199,69.82,,,95,95,0,0,,,,,95,61,0,0,49,27.26,4,1,1,8,1,8,1,8,0,,3,Transparente,Blanco,Negro,Negro
+15,Whiskey,buchanans two souls,Vidrio Transparente,750,40,Importado,Si,Si,No,No,Prisma rectangular,140,,105.93,71.84,100,79,0,0,,,,,30,81,0,0,,,4.5,1,1,8,1,8,1,8,0,,3,Transparente,Blanco,Plata,Plata
+16,Cerveza,modelo especial,Lata Aluminio,473,4.5,Nacional,Si,Si,Si,No,Cilindro,142,65.7,,,142,90,0,0,142,29,0,0,142,90,0,0,,,3.5,2,0,,0,,0,,1,10.5,1,Blanco,,Negro,
+17,Cerveza,tecate original,Lata Aluminio,710,4.5,Nacional,Si,Si,Si,No,Cilindro,175,72.71,,,175,103.5,0,0,175,22,0,0,175,103.5,0,0,,,4,2,0,,0,,0,,1,12,1,Plata,,Negro,
+18,Ron,capitan morgan,Vidrio Transparente,700,35,Nacional,Si,Si,No,Si,Cilindro,190,69.85,,,121,95,0,0,,,,,47,91,0,0,41,29.71,4.5,1,1,7,1,7,1,7,0,,3,Transparente,Blanco,Gris,Negro
+19,Licor,Licor 43,Vidrio Transparente,700,31,Importado,Si,Si,No,Si,Cilindro,130,75.67,,,97,58,0,0,,,,,55,88,0,0,55,32.97,3,1,1,7.5,1,7.5,1,7.5,0,,3,Transparente,Transparente,Blanco,Blanco
+20,Mezcal,amarás cupreata,Vidrio Transparente,750,40.3,Nacional,Si,Si,No,No,Cilindro,188,81.3,,,103,74,103,17.24271845,,,,,134,37,0,0,,,3.5,1,1,8,1,8,1,8,0,,3,Transparente,Transparente,Negro,Rojo
+21,Licor,campari,Vidrio Transparente,750,25,Importado,Si,Si,Si,Si,Cilindro,197,74.38,,,88,92,0,0,98,25,0,0,86,56,0,0,33,29.35,3,2,1,7,1,7,1,7,0,,3,Transparente,Transparente,Gris,Gris
+22,Vino,indígeno,Vidrio Transparente,750,11.5,Importado,Si,Si,No,No,Cilindro,136,75.12,,,90,108,0,0,,,,,40,58,0,0,,,4,1,1,7,1,7,1,7,0,,3,Transparente,Transparente,Blanco,Blanco
+23,Ron,bacardi carta blanca,Vidrio Transparente,750,40,Nacional,Si,Si,No,Si,Cilindro,203,73.41,,,89,139,89,24.43820225,,,,,89,66,0,0,37,29.55,5,1,1,8,1,8,1,8,0,,3,Blanco,,Negro,Negro
+24,Ginebra,beefeater,Vidrio Transparente,750,40,Importado,Si,Si,No,Si,Prisma rectangular,220,,66.46,68.5,149,66.46,0,0,,,,,148,66.5,0,0,23,33.2,3,1,1,7,1,7,1,7,0,,3,Transparente,Blanco,Negro,Gris
+25,Mezcal,union,Vidrio Transparente,700,38,Nacional,Si,Si,No,No,Cilindro,196,66.22,,,89,110,89,27.13483146,,,,,84,80,0,0,,,3,1,1,8.5,1,8.5,1,8.5,0,,3,Transparente,Crema,Negro,Rojo
+26,Vino,cinzano,Vidrio Verde,750,11.5,Importado,Si,Si,No,Si,Cilindro,110,82.45,,,70,65,0,0,,,,,60,80,60,28,125,29.76,3.5,1,1,7,1,7,1,7,0,,3,Transparente,Negro,Blanco,Blanco
+27,Ginebra,hendrick's,Vidrio Ambar,750,41.4,Importado,Si,Si,No,No,Cilindro,143,89.61,,,88,136,88,0,,,,,99,52,99,38,,,6,1,1,8,1,8,1,8,0,,3,Transparente,Crema,Negro,Rojo
+28,Rompope,la casita,Vidrio Transparente,250,12,Nacional,Si,Si,No,No,Cilindro,96,56.92,,,59,98,0,0,,,,,59,98,0,0,,,3.5,1,1,6,1,6,1,6,0,,3,Blanco,,Negro,Rojo
+29,Licor,baileys,Otro,1000,17,Importado,Si,Si,No,No,Cilindro,161,82.78,,,110,94,0,0,,,,,76,70,0,0,,,5,1,1,8,1,8,1,8,0,,3,Transparente,Negro,Crema,Crema
+30,Cerveza,modelo especial,Vidrio Transparente,1000,4.5,Nacional,Si,No,No,Si,Cilindro,170,83.57,,,118,131,0,0,,,,,,,,,5.9,33.8,3,4,0,,0,,0,,1,10,1,Transparente,Dorado,Negro,
+31,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,,,,,,,,
+32,Whiskey,Ballantine's,Vidrio Ambar,700,40,Importado,Si,Si,No,Si,Prisma rectangular,171,,90.44,59.71,10.8,83,10.8,83,,,,,80,65,0,0,26,29.84,4,1,1,7,1,7,1,7,0,,3,Transparente,Crema,Azul,Azul
+33,Vino,diamante rioja,Vidrio Verde,187,13.5,Importado,Si,Si,No,Si,Cilindro,100,51.23,,,80,80,0,0,,,,,65,60,0,0,11,25.59,3.5,1,1,7,1,7,1,7,0,,3,Transparente,Blanco,Negro,Rojo
+34,Ron,bacardi añejo,Vidrio Ambar,200,35,Nacional,Si,Si,No,Si,Prisma rectangular,117,,68.86,34.67,55,50,55,15.81818182,,,,,35,45,0,0,25,29.83,3,1,1,3.5,1,3.5,1,3.5,0,,3,Transparente,Blanco,Negro,Negro
+35,Vodka,zaverich premium,Otro,1000,36,Nacional,Si,Si,No,Si,Cilindro,198,77.45,,,198,75,0,0,,,,,160,43,0,0,17,33.34,3.5,1,1,8,1,8,1,8,0,,3,Transparente,Azul,Blanco,Blanco
+36,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,,,,,,,,
+37,Bebida preparada,perla negra,Lata Aluminio,473,8,Nacional,Si,Si,Si,No,Cilindro,141,65.23,,,141,92,0,0,141,24,0,0,141,92,0,0,,,3,2,1,6,1,6,1,6,0,,3,Plata,,Negro,
+38,Bebida preparada,agua rifada,Lata Aluminio,355,4.2,Nacional,Si,Si,Si,No,Cilindro,147,57.18,,,147,83,0,0,147,21,0,0,147,77,0,0,,,3.5,2,1,8,1,8,0,,1,10,3,Blanco,,Plata,Plata
+39,Cerveza,tecate ambar,Vidrio Ambar,1200,4,Nacional,Si,No,No,No,Cilindro,189,90.56,,,129,106,0,0,,,,,,,,,,,5.5,3,0,,0,,0,,1,12,1,Transparente,Plata,Negro,Blanco
+40,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,,,,,,,,
+41,Rompope,nuestro rompope,Vidrio Transparente,750,2.8,Nacional,Si,No,No,No,Cilindro,178,77.86,,,104,90,0,0,69,61,,,,,,,,,,,0,,0,,0,,0,,0,,,,
+42,Cerveza,chingones victoria,Lata Aluminio,473,1.8,Nacional,Si,Si,Si,No,Cilindro,139,65.12,,,139,74.5,0,0,139,30,0,0,139,74.5,0,0,,,4,2,0,,0,,0,,1,11,1,Transparente,Negro,Plata,
+43,Cerveza,amstel ultra,Lata Aluminio,355,4,Nacional,Si,Si,Si,No,Cilindro,148,56.64,,,148,75.5,0,0,148,15,0,0,148,75.5,0,0,,,3,2,0,,0,,0,,1,12,1,Plata,,Negro,
+44,Cerveza,heineken,Lata Aluminio,473,5,Nacional,Si,No,Si,No,Cilindro,141,65.39,,,141,157,0,0,141,52,0,0,,,,,,,3,2,0,,1,8,1,8,1,12.5,3,Gris,Verde,Plata,Plata
