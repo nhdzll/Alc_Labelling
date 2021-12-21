@@ -1,5 +1,3 @@
-library(ggplot2)
-
 #Cargamos la base de datos con la información de los envases de alcohol
 setwd("C:/Users/norberto.llanes/Desktop/Etiquetado Bebidas Alcoholicas/Analisis R/15dic2021")
 etiq <- read.csv("BD_etiq_alcohol-1_2.csv", header = TRUE)
@@ -50,26 +48,58 @@ etiq2$EL_area_cm <- ((etiq2$EL1_ancho*etiq2$EL1_largo)+(etiq2$EL2_ancho*etiq2$EL
 #Marbete
 etiq2$marbete_area_cm <- (2*pi*(etiq2$marbete_diametro/2)*etiq2$marbete_altura)/1000
 
-ef <- summary(etiq2$EF_area_cm)
-et <- summary(etiq2$ET_area_cm)
-el <- summary(etiq2$EL_area_cm)
-marbete <- summary(etiq2$marbete_area_cm)
+summary(etiq2$EF_area_cm)
+summary(etiq2$ET_area_cm)
+summary(etiq2$EL_area_cm)
+summary(etiq2$marbete_area_cm)
 
+#Área de los pictogramas
+etiq2$area_pict_total <-  ((pi*(etiq2$P1_altura/2)^2) +
+				  (pi*(etiq2$P2_altura/2)^2) +
+				  (pi*(etiq2$P3_altura/2)^2) +
+				  (pi*(etiq2$P1_altura/2)^2))/1000
 
 areas_relativas <- data.frame(EF = (etiq2$EF_area_cm/etiq2$area_envase_cm)*100,
 					EL = (etiq2$EL_area_cm/etiq2$area_envase_cm)*100,
 					ET = (etiq2$ET_area_cm/etiq2$area_envase_cm)*100,
 					Marbete = (etiq2$marbete_area_cm/etiq2$area_envase_cm)*100)
 
-png("Figura_1.png", res = 300, unit = "px", width = 1800, height = 1440)
+areas_relativas$Pict_ET <- ifelse(etiq2$posicion_pictograma == 1, (etiq2$area_pict_total/etiq2$area_envase_cm) * 100, NA)
+areas_relativas$Pict_EL <- ifelse(etiq2$posicion_pictograma == 2, (etiq2$area_pict_total/etiq2$area_envase_cm) * 100, NA)
+areas_relativas$Pict_EF <- ifelse(etiq2$posicion_pictograma == 3, (etiq2$area_pict_total/etiq2$area_envase_cm) * 100, NA)
+areas_relativas$Pict_Marbete <- ifelse(etiq2$posicion_pictograma == 4, (etiq2$area_pict_total/etiq2$area_envase_cm) * 100, NA)
+
+areas <- list( "Etiqueta frontal" = areas_relativas$Pict_EF, "Etiqueta Trasera" = areas_relativas$Pict_ET, "Etiqueta Lateral" = areas_relativas$Pict_EL, "Marbete" = areas_relativas$Pict_Marbete)
+
+
+#Figura 1
+#png("Figura_1.png")
 plot.new()
-rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4],
-     col = "#ebebeb")
+par(new = TRUE, mar = c(5,4,1,1))
+rect(0, 0, 1, 1,
+     #par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4],
+     col = "#ebebeb", border = NA)
 grid(nx = NULL, ny = NULL, col = "white", lty = 1,
      lwd = par("lwd"), equilogs = TRUE)
-par(new = TRUE)
-boxplot(areas_relativas, xlab = "Localización de la etiqueta",
-	  ylab = "%", cex.main = 1, cex.lab = 0.9, cex = 0.7, col = rgb(0, 0, 1, alpha = 0.4),
-        main = "Área relativa de las etiquetas de acuerdo a su localización")
-dev.off()
+par (new = TRUE, mar = c(5,4,1,1))
+boxplot(areas_relativas$EF, areas_relativas$ET, areas_relativas$EL, areas_relativas$Marbete,
+	  at = c(1,2,3,4),  names = c("Etiq Frontal", "Etiq Trasera", "Etiq Lateral", "Marbete"),
+	  ylab = "Localización", xlab = "Área relativa respecto al contenedor (%)", ylim =c(0,100), yaxp = c(0, 100, 10),cex.main = 1, 
+	  cex.lab = 0.9, cex = 0.7, col = rgb(0, 0, 1, alpha = 0.4), horizontal = TRUE)
+stripchart(areas, method = "jitter", pch = 10, add = TRUE, col = "red")
+legend("topright", inset = 0.02, legend = "Área relativa de los símbolos", col = "red", pch =10, bg = "#FFFFFF", box.lty=0)
+#dev.off()
+
+#Análisis de los colores}
+#Cuando el color de fondo es transparente (n=26) se toma el color de la etiqueta
+etiq2$bg_col <- etiq2$color_fondo
+etiq2$bg_col <- ifelse(etiq2$color_fondo == "Transparente", etiq2$color_etiqueta, etiq2$bg_col)
+
+
+table(etiq2$color_fondo, etiq2$color_etiqueta)color_figura color_lineas
+
+
+col_142_claro <- (etiq2$bg_col == "Blanco" | etiq2$bg_col == "Crema") & etiq2$color_figura == "Negro" & etiq2$color_lineas == "Rojo"
+col_142_oscuro <- etiq2$bg_col == "Negro" & (etiq2$color_figura == "Blanco" | etiq2$color_figura == "Crema") & etiq2$color_lineas == "Rojo"
+col_142_transp <- etiq2$bg_col == "Transparente"
 
