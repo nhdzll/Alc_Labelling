@@ -1,3 +1,6 @@
+library(networkD3)
+library(magrittr)
+
 #Cargamos la base de datos con la información de los envases de alcohol
 setwd("C:/Users/norberto.llanes/Desktop/Etiquetado Bebidas Alcoholicas/Analisis R/15dic2021")
 etiq <- read.csv("BD_etiq_alcohol-1_2.csv", header = TRUE)
@@ -90,16 +93,33 @@ stripchart(areas, method = "jitter", pch = 10, add = TRUE, col = "red")
 legend("topright", inset = 0.02, legend = "Área relativa de los símbolos", col = "red", pch =10, bg = "#FFFFFF", box.lty=0)
 #dev.off()
 
-#Análisis de los colores}
+#Análisis de los colores
 #Cuando el color de fondo es transparente (n=26) se toma el color de la etiqueta
 etiq2$bg_col <- etiq2$color_fondo
 etiq2$bg_col <- ifelse(etiq2$color_fondo == "Transparente", etiq2$color_etiqueta, etiq2$bg_col)
-
-
-table(etiq2$color_fondo, etiq2$color_etiqueta)color_figura color_lineas
-
 
 col_142_claro <- (etiq2$bg_col == "Blanco" | etiq2$bg_col == "Crema") & etiq2$color_figura == "Negro" & etiq2$color_lineas == "Rojo"
 col_142_oscuro <- etiq2$bg_col == "Negro" & (etiq2$color_figura == "Blanco" | etiq2$color_figura == "Crema") & etiq2$color_lineas == "Rojo"
 col_142_transp <- etiq2$bg_col == "Transparente"
 
+summary(col_142_claro) # 7/40 = 17.5%
+summary(col_142_oscuro) # 7/40 = 2.5%
+summary(col_142_transp) # 5/40 = 12.5%
+
+#Diagrama de Sankey
+colors <- data.frame(bg = paste0("bg_",etiq2$bg_col),
+			   fig = paste0("fg_", etiq2$color_figura),
+			   lin = paste0("ln_", etiq2$color_lineas))
+#write.csv(colors, "colores.csv")
+#Código para convertir la matriz de colores a distancias entre nodos
+###
+#Generamos el diagrama de Sankey
+
+links <- read.csv("links_n40.csv", header = TRUE)
+nodes <- read.csv("nodes_n40.csv", header = TRUE)
+
+sankey <- sankeyNetwork(Links = links, Nodes = nodes, Source = "source",
+              Target = "target", Value = "value", NodeID = "names",
+              units = "TWh", fontSize = 18, nodeWidth = 30, fontFamily = "Arial")
+
+sankey
