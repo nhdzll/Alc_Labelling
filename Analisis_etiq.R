@@ -79,15 +79,14 @@ areas <- list( "Etiqueta frontal" = areas_relativas$Pict_EF, "Etiqueta Trasera" 
 #png("Figura_1.png")
 plot.new()
 par(new = TRUE, mar = c(5,4,1,1))
-rect(0, 0, 1, 1,
-     #par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4],
+rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4],
      col = "#ebebeb", border = NA)
 grid(nx = NULL, ny = NULL, col = "white", lty = 1,
      lwd = par("lwd"), equilogs = TRUE)
 par (new = TRUE, mar = c(5,4,1,1))
 boxplot(areas_relativas$EF, areas_relativas$ET, areas_relativas$EL, areas_relativas$Marbete,
 	  at = c(1,2,3,4),  names = c("Etiq Frontal", "Etiq Trasera", "Etiq Lateral", "Marbete"),
-	  ylab = "Localización", xlab = "Área relativa respecto al contenedor (%)", ylim =c(0,100), yaxp = c(0, 100, 10),cex.main = 1, 
+	  ylab = "Localización", xlab = "Área relativa respecto al envase (%)", ylim =c(0,100), yaxp = c(0, 100, 10),cex.main = 1, 
 	  cex.lab = 0.9, cex = 0.7, col = rgb(0, 0, 1, alpha = 0.4), horizontal = TRUE)
 stripchart(areas, method = "jitter", pch = 10, add = TRUE, col = "red")
 legend("topright", inset = 0.02, legend = "Área relativa de los símbolos", col = "red", pch =10, bg = "#FFFFFF", box.lty=0)
@@ -106,7 +105,7 @@ summary(col_142_claro) # 7/40 = 17.5%
 summary(col_142_oscuro) # 7/40 = 2.5%
 summary(col_142_transp) # 5/40 = 12.5%
 
-#Diagrama de Sankey
+#Diagrama de Sankey (Figura 2)
 colors <- data.frame(bg = paste0("bg_",etiq2$bg_col),
 			   fig = paste0("fg_", etiq2$color_figura),
 			   lin = paste0("ln_", etiq2$color_lineas))
@@ -123,3 +122,5 @@ sankey <- sankeyNetwork(Links = links, Nodes = nodes, Source = "source",
               units = "TWh", fontSize = 18, nodeWidth = 30, fontFamily = "Arial")
 
 sankey
+
+summary(etiq2$tamano_texto)
